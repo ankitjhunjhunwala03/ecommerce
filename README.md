@@ -1,19 +1,106 @@
-**Prerequisites**
+Certainly! Below is a template for `README.md` files for each of the services (`ecommerce`, `auth_service`, `product_service`, and `order_service`). Each section includes instructions for normal setup, Docker Compose setup, and Kubernetes setup.
 
-`Docker Desktop`: Ensure Docker Desktop is installed and Kubernetes is enabled.
+### ecommerce Service
 
-`kubectl`: Ensure kubectl is installed and configured.
+#### Normal Setup
 
-**Step 1:** 
+1. **Clone the Repository:**
+   ```bash
+   git clone <repository_url>
+   cd ecommerce
+   ```
 
-`1. Enable Kubernetes in Docker Desktop`
+2. **Install Dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-`2. Open Docker Desktop.`
+3. **Run the Development Server:**
+   ```bash
+   python manage.py runserver
+   ```
+   The server will start at `http://localhost:8000`.
 
-`3. Go to Settings (gear icon).`
+#### Docker Compose Setup
 
-`4. Navigate to the Kubernetes tab.`
+1. **Build and Run Containers:**
+   ```bash
+   docker-compose up --build
+   ```
+   
+2. **Access the Service:**
+   The ecommerce service will be available at `http://localhost:8000`.
 
-`5. Check the box to enable Kubernetes.`
+#### Kubernetes Setup
 
-`6. Apply and restart Docker Desktop if necessary.`
+1. **Apply Kubernetes Configuration:**
+   ```bash
+   kubectl apply -f ecommerce.yaml
+   ```
+   
+2. **Access the Service:**
+   Use the configured Kubernetes service endpoint to access the ecommerce service.
+
+### auth_service
+
+#### Normal Setup
+
+1. **Clone the Repository:**
+   ```bash
+   git clone <repository_url>
+   cd auth_service
+   ```
+
+2. **Install Dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the Development Server:**
+   ```bash
+   python manage.py runserver
+   ```
+   The server will start at `http://localhost:8000`.
+
+#### Docker Compose Setup
+
+1. **Build and Run Containers:**
+   ```bash
+   docker-compose up --build
+   ```
+   
+2. **Access the Service:**
+   The auth_service will be available at `http://localhost:8000`.
+
+#### Kubernetes Setup
+
+1. **Apply Kubernetes Configuration:**
+   ```bash
+   kubectl apply -f auth_service.yaml
+   ```
+   
+2. **Access the Service:**
+   Use the configured Kubernetes service endpoint to access the auth_service.
+
+### product_service
+
+#### Normal Setup
+
+1. **Clone the Repository:**
+   ```bash
+   git clone <repository_url>
+   cd product_service
+   ```
+
+2. **Install Dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the Development Server:**
+   ```bash
+   python manage.py runserver
+   ```
+   The server will start at `http://localhost:8001`.
+
+#### Docker Compose
